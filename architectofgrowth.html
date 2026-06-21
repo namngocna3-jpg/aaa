@@ -266,6 +266,7 @@
                                 <span class="inline-flex items-center gap-2 text-sm text-ink/70 font-medium">/ học viên</span>
                             </div>
                             <span class="mt-2 inline-flex w-fit items-center gap-1 rounded-full bg-lime/25 px-3 py-1 text-xs font-bold text-ink">🔥 Đang giảm <span class="js-savings">2.800.000</span>đ so với giá gốc</span>
+                            <p class="early-bird-note mt-2 text-sm font-bold text-destructive">⏰ Giá 500.000đ chỉ áp dụng đến hết Thứ 5, ngày 25/06!</p>
                         </div>
                         <div class="mt-4 flex flex-col gap-3">
                             <a href="#dang-ky-form" class="block">
@@ -762,6 +763,7 @@
                         <span class="text-2xl font-medium text-muted-foreground line-through decoration-red-500/70">3.300.000đ</span>
                         <span class="text-5xl sm:text-6xl font-extrabold tracking-tight text-ink"><span class="js-base-price">500.000</span><span class="text-2xl">đ</span></span>
                         <p class="text-xs text-electric font-semibold mt-1">* Ưu đãi đăng ký sớm · giá sẽ tăng dần theo thời gian</p>
+                        <p class="early-bird-note text-sm font-bold text-destructive mt-2">⏰ Giá 500.000đ chỉ áp dụng đến hết Thứ 5, ngày 25/06!</p>
                     </div>
                     <p class="text-sm font-semibold text-ink/80 mt-1">/ học viên</p>
                     <p class="mt-5 text-sm text-muted-foreground">Lịch học: Tối Thứ 3 &amp; Thứ 5 (19:30 - 22:00)<br>Các ngày: 30/06, 02/07, 07/07 &amp; 09/07.</p>
@@ -1064,8 +1066,8 @@
         // Điền các mốc khi có. Giá áp dụng = mốc ĐẦU TIÊN còn hiệu lực (hôm nay <= until).
         // Ví dụ: { until: '2026-06-25', price: 3300000 } nghĩa là đến hết 25/06 giá là 3.300.000đ.
         const PRICE_TIERS = [
-            { until: '2026-06-23', price: 500000 },   // đến hết 23/06: 500.000đ (giảm 2.800.000đ so với giá gốc)
-            { until: '2026-06-26', price: 1200000 },  // 24-26/06: 1.200.000đ
+            { until: '2026-06-25', price: 500000 },   // tới hết Thứ 5 25/06: 500.000đ (giảm 2.800.000đ so với giá gốc)
+            { until: '2026-06-26', price: 1200000 },  // 26/06: 1.200.000đ
             { until: '2026-06-28', price: 2000000 },  // 27-28/06: 2.000.000đ
             { until: '2026-06-30', price: 2800000 },  // 29-30/06: 2.800.000đ
             { until: '2999-12-31', price: 3300000 }   // từ 01/07: giá gốc 3.300.000đ
@@ -1081,6 +1083,7 @@
         document.querySelectorAll('.js-base-price').forEach(function(el){ el.textContent = BASE_PRICE.toLocaleString('vi-VN'); });
         const STRIKE_PRICE = 3300000;
         document.querySelectorAll('.js-savings').forEach(function(el){ el.textContent = (STRIKE_PRICE - BASE_PRICE).toLocaleString('vi-VN'); });
+        if (BASE_PRICE !== 500000) { document.querySelectorAll('.early-bird-note').forEach(function(el){ el.style.display = 'none'; }); }
         const STAFF_PRICE = 0; // Giá ưu đãi cho mỗi nhân sự đi kèm
         let appliedVoucher = "";
         let isPercentageDiscount = false;
