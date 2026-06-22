@@ -1362,7 +1362,7 @@
             let q = getTotalQuantity();
             const totals = calculateTotal();
             
-            const currentNdck = `AOG${formValues.concatPhones}`;
+            const currentNdck = `SEVQR AOG${formValues.concatPhones}`;
 
             try {
                 await fetch("https://hook.eu1.make.com/ifgfsy9y9flbmy0fbp4m1gicnxnbp3j2", {
@@ -1417,7 +1417,7 @@
             document.getElementById('pay-content').innerText = currentNdck;
             document.getElementById('pay-total').innerText = formatMoney(totals.finalTotal);
             
-            const qrUrl = `https://img.vietqr.io/image/970415-101875974897-qr_only.png?amount=${totals.finalTotal}&addInfo=${currentNdck}&accountName=HUYNH%20XUAN%20TUNG`;
+            const qrUrl = `https://img.vietqr.io/image/970415-101875974897-qr_only.png?amount=${totals.finalTotal}&addInfo=${encodeURIComponent(currentNdck)}&accountName=HUYNH%20XUAN%20TUNG`;
             document.getElementById('pay-qr').src = qrUrl;
             
             // Ẩn toàn bộ section marketing (kể cả section không có id) để chỉ còn lại phần thanh toán
