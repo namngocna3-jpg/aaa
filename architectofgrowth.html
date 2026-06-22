@@ -187,7 +187,7 @@
         <div class="container mx-auto max-w-7xl flex items-center justify-between px-4 py-4">
             <a href="#top" class="flex items-center gap-2">
                 <div class="flex items-center gap-2">
-                    <img src="https://i.ibb.co/tFrhyTn/Tas-Global-1-1.png" alt="TAS Global" class="h-10 w-auto object-contain">
+                    <span class="text-base sm:text-lg font-extrabold tracking-tight text-ink">ARCHITECT OF GROWTH</span>
                 </div>
             </a>
             
@@ -938,7 +938,6 @@
     <!-- Footer -->
     <footer class="border-t border-border bg-white py-8 sm:py-10 text-sm text-muted-foreground">
         <div class="container mx-auto flex flex-col items-center justify-between gap-4 px-4 md:flex-row max-w-7xl">
-            <img src="https://i.ibb.co/tFrhyTn/Tas-Global-1-1.png" alt="TAS Global" class="h-9 w-auto object-contain opacity-80">
             <div>© 2026 TAS Global · ARCHITECT OF GROWTH. All rights reserved.</div>
             <nav class="flex gap-5"><a href="tel:0932882200" class="hover:text-ink">Hỗ trợ nhanh: 0932 882 200</a></nav>
         </div>
@@ -985,9 +984,9 @@
                         <img id="pay-qr" src="" alt="QR" class="w-56 h-56 object-contain rounded-xl">
                     </div>
                     <div class="space-y-2 text-sm mb-6 text-ink">
-                        <p>Ngân hàng: <b class="font-bold">MB Bank</b></p>
-                        <p>Số tài khoản: <b class="text-electric text-xl font-bold">857759999</b></p>
-                        <p>Chủ tài khoản: <b class="font-bold">TAS GLOBAL</b></p>
+                        <p>Ngân hàng: <b class="font-bold">VietinBank</b></p>
+                        <p>Số tài khoản: <b class="text-electric text-xl font-bold">101875974897</b></p>
+                        <p>Chủ tài khoản: <b class="font-bold">HUYNH XUAN TUNG</b></p>
                     </div>
                     <button id="btn-confirm-pay" class="w-full bg-ink text-white font-bold py-4 rounded-xl hover:bg-black transition-colors flex items-center justify-center gap-2 shadow-lg">
                         TÔI ĐÃ CHUYỂN KHOẢN
@@ -1418,7 +1417,7 @@
             document.getElementById('pay-content').innerText = currentNdck;
             document.getElementById('pay-total').innerText = formatMoney(totals.finalTotal);
             
-            const qrUrl = `https://img.vietqr.io/image/MB-857759999-qr_only.png?amount=${totals.finalTotal}&addInfo=${currentNdck}&accountName=TAS%20GLOBAL`;
+            const qrUrl = `https://img.vietqr.io/image/970415-101875974897-qr_only.png?amount=${totals.finalTotal}&addInfo=${currentNdck}&accountName=HUYNH%20XUAN%20TUNG`;
             document.getElementById('pay-qr').src = qrUrl;
             
             // Ẩn toàn bộ section marketing (kể cả section không có id) để chỉ còn lại phần thanh toán
